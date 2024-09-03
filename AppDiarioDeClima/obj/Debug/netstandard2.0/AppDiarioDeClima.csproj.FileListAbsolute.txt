@@ -1,0 +1,16 @@
+D:\Projetos\AppDiarioDeClima\AppDiarioDeClima\bin\Debug\netstandard2.0\AppDiarioDeClima.deps.json
+D:\Projetos\AppDiarioDeClima\AppDiarioDeClima\bin\Debug\netstandard2.0\AppDiarioDeClima.dll
+D:\Projetos\AppDiarioDeClima\AppDiarioDeClima\bin\Debug\netstandard2.0\ref\AppDiarioDeClima.dll
+D:\Projetos\AppDiarioDeClima\AppDiarioDeClima\bin\Debug\netstandard2.0\AppDiarioDeClima.pdb
+D:\Projetos\AppDiarioDeClima\AppDiarioDeClima\obj\Debug\netstandard2.0\AppDiarioDeClima.csproj.AssemblyReference.cache
+D:\Projetos\AppDiarioDeClima\AppDiarioDeClima\obj\Debug\netstandard2.0\AppDiarioDeClima.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projetos\AppDiarioDeClima\AppDiarioDeClima\obj\Debug\netstandard2.0\App.xaml.g.cs
+D:\Projetos\AppDiarioDeClima\AppDiarioDeClima\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+D:\Projetos\AppDiarioDeClima\AppDiarioDeClima\obj\Debug\netstandard2.0\AppDiarioDeClima.AssemblyInfoInputs.cache
+D:\Projetos\AppDiarioDeClima\AppDiarioDeClima\obj\Debug\netstandard2.0\AppDiarioDeClima.AssemblyInfo.cs
+D:\Projetos\AppDiarioDeClima\AppDiarioDeClima\obj\Debug\netstandard2.0\AppDiarioDeClima.csproj.CoreCompileInputs.cache
+D:\Projetos\AppDiarioDeClima\AppDiarioDeClima\obj\Debug\netstandard2.0\AppDiarioDeClima.sourcelink.json
+D:\Projetos\AppDiarioDeClima\AppDiarioDeClima\obj\Debug\netstandard2.0\XamlC.stamp
+D:\Projetos\AppDiarioDeClima\AppDiarioDeClima\obj\Debug\netstandard2.0\AppDiarioDeClima.dll
+D:\Projetos\AppDiarioDeClima\AppDiarioDeClima\obj\Debug\netstandard2.0\refint\AppDiarioDeClima.dll
+D:\Projetos\AppDiarioDeClima\AppDiarioDeClima\obj\Debug\netstandard2.0\AppDiarioDeClima.pdb

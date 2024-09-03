@@ -1,26 +1,28 @@
 {
   "format": 1,
   "restore": {
-    "D:\\GITHUB\\AppDiarioDeClima\\AppDiarioDeClima.iOS\\AppDiarioDeClima.iOS.csproj": {}
+    "D:\\Projetos\\AppDiarioDeClima\\AppDiarioDeClima.iOS\\AppDiarioDeClima.iOS.csproj": {}
   },
   "projects": {
-    "D:\\GITHUB\\AppDiarioDeClima\\AppDiarioDeClima.iOS\\AppDiarioDeClima.iOS.csproj": {
+    "D:\\Projetos\\AppDiarioDeClima\\AppDiarioDeClima.iOS\\AppDiarioDeClima.iOS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\GITHUB\\AppDiarioDeClima\\AppDiarioDeClima.iOS\\AppDiarioDeClima.iOS.csproj",
+        "projectUniqueName": "D:\\Projetos\\AppDiarioDeClima\\AppDiarioDeClima.iOS\\AppDiarioDeClima.iOS.csproj",
         "projectName": "AppDiarioDeClima.iOS",
-        "projectPath": "D:\\GITHUB\\AppDiarioDeClima\\AppDiarioDeClima.iOS\\AppDiarioDeClima.iOS.csproj",
+        "projectPath": "D:\\Projetos\\AppDiarioDeClima\\AppDiarioDeClima.iOS\\AppDiarioDeClima.iOS.csproj",
         "packagesPath": "C:\\Users\\lucas\\.nuget\\packages\\",
-        "outputPath": "D:\\GITHUB\\AppDiarioDeClima\\AppDiarioDeClima.iOS\\obj\\",
+        "outputPath": "D:\\Projetos\\AppDiarioDeClima\\AppDiarioDeClima.iOS\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
           "C:\\Users\\lucas\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "xamarinios10"
@@ -32,8 +34,8 @@
         "frameworks": {
           "xamarinios10": {
             "projectReferences": {
-              "D:\\GITHUB\\AppDiarioDeClima\\AppDiarioDeClima\\AppDiarioDeClima.csproj": {
-                "projectPath": "D:\\GITHUB\\AppDiarioDeClima\\AppDiarioDeClima\\AppDiarioDeClima.csproj"
+              "D:\\Projetos\\AppDiarioDeClima\\AppDiarioDeClima\\AppDiarioDeClima.csproj": {
+                "projectPath": "D:\\Projetos\\AppDiarioDeClima\\AppDiarioDeClima\\AppDiarioDeClima.csproj"
               }
             }
           }
@@ -47,17 +49,13 @@
       "frameworks": {
         "xamarinios10": {
           "dependencies": {
-            "RestSharp": {
-              "target": "Package",
-              "version": "[112.0.0, )"
-            },
             "Xamarin.Essentials": {
               "target": "Package",
-              "version": "[1.8.1, )"
+              "version": "[1.7.0, )"
             },
             "Xamarin.Forms": {
               "target": "Package",
-              "version": "[5.0.0.2662, )"
+              "version": "[5.0.0.2196, )"
             }
           }
         }
@@ -77,22 +75,24 @@
         }
       }
     },
-    "D:\\GITHUB\\AppDiarioDeClima\\AppDiarioDeClima\\AppDiarioDeClima.csproj": {
+    "D:\\Projetos\\AppDiarioDeClima\\AppDiarioDeClima\\AppDiarioDeClima.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\GITHUB\\AppDiarioDeClima\\AppDiarioDeClima\\AppDiarioDeClima.csproj",
+        "projectUniqueName": "D:\\Projetos\\AppDiarioDeClima\\AppDiarioDeClima\\AppDiarioDeClima.csproj",
         "projectName": "AppDiarioDeClima",
-        "projectPath": "D:\\GITHUB\\AppDiarioDeClima\\AppDiarioDeClima\\AppDiarioDeClima.csproj",
+        "projectPath": "D:\\Projetos\\AppDiarioDeClima\\AppDiarioDeClima\\AppDiarioDeClima.csproj",
         "packagesPath": "C:\\Users\\lucas\\.nuget\\packages\\",
-        "outputPath": "D:\\GITHUB\\AppDiarioDeClima\\AppDiarioDeClima\\obj\\",
+        "outputPath": "D:\\Projetos\\AppDiarioDeClima\\AppDiarioDeClima\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
           "C:\\Users\\lucas\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
@@ -128,10 +128,6 @@
               "target": "Package",
               "version": "[2.0.3, )",
               "autoReferenced": true
-            },
-            "RestSharp": {
-              "target": "Package",
-              "version": "[112.0.0, )"
             },
             "Xamarin.Essentials": {
               "target": "Package",
