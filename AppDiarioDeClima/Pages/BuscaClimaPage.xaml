@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="AppDiarioDeClima.Pages.BuscaClimaPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    BackgroundColor="{StaticResource Secondary}">
+    <ContentPage.Content>
+        <StackLayout
+            Padding="30"
+            Spacing="20"
+            VerticalOptions="CenterAndExpand">
+
+            <!--  Campo para inserir a cidade  -->
+            <Entry
+                x:Name="cidadeEntry"
+                Keyboard="Default"
+                Placeholder="Digite a cidade" />
+
+            <!--  Botão para buscar clima  -->
+            <Button
+                x:Name="btnClima"
+                BackgroundColor="#2196F3"
+                Clicked="btnClima_Clicked"
+                Text="Buscar Clima"
+                TextColor="White" />
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

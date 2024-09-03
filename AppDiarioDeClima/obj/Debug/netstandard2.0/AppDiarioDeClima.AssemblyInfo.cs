@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AppDiarioDeClima")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4811259d1ad43cd398d48785c12dc8a6ebf98fbb")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f3f8abf1d37b132845de381c2d9217d024062047")]
 [assembly: System.Reflection.AssemblyProductAttribute("AppDiarioDeClima")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AppDiarioDeClima")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

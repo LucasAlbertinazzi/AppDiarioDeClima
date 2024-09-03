@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="AppDiarioDeClima.Pages.MenuPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    BackgroundColor="{StaticResource Secondary}">
+    <ContentPage.Content>
+        <Grid Padding="10" VerticalOptions="StartAndExpand">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+
+            </Grid.ColumnDefinitions>
+            <Button
+                BackgroundColor="#2196F3"
+                Clicked="OnBuscaClima"
+                FontSize="Large"
+                HeightRequest="160"
+                HorizontalOptions="FillAndExpand"
+                Text="Pesquisar Clima"
+                TextColor="White" />
+
+            <Button
+                Grid.Column="1"
+                BackgroundColor="#4CAF50"
+                Clicked="OnHistoricoClima"
+                FontSize="Large"
+                HeightRequest="160"
+                HorizontalOptions="FillAndExpand"
+                Text="Últimas Pesquisas"
+                TextColor="White" />
+
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

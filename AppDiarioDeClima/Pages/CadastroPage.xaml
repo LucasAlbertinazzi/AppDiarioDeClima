@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="AppDiarioDeClima.Pages.CadastroPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    BackgroundColor="{StaticResource Secondary}">
+    <ContentPage.Content>
+        <StackLayout
+            Padding="30"
+            Spacing="20"
+            VerticalOptions="CenterAndExpand">
+
+            <!--  Campo de usuário  -->
+            <Entry
+                x:Name="usernameEntry"
+                Keyboard="Default"
+                Placeholder="Usuário" />
+
+            <!--  Campo de senha  -->
+            <Grid Margin="0,0,0,30">
+                <Entry
+                    x:Name="passwordEntry"
+                    IsPassword="True"
+                    Placeholder="Senha" />
+
+                <!--  Botão para mostrar/ocultar senha  -->
+                <ImageButton
+                    Margin="10"
+                    BackgroundColor="Transparent"
+                    Clicked="OnTogglePasswordVisibilityClicked"
+                    HeightRequest="35"
+                    HorizontalOptions="End"
+                    Source="eye_icon.png"
+                    VerticalOptions="Center" />
+            </Grid>
+
+            <!--  Botão de Cadastrar  -->
+            <Button
+                x:Name="btnCad"
+                BackgroundColor="#2196F3"
+                Clicked="btnCad_Clicked"
+                Text="Cadastrar"
+                TextColor="White" />
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

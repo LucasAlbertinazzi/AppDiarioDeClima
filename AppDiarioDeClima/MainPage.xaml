@@ -1,24 +1,73 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="AppDiarioDeClima.MainPage">
+<ContentPage
+    x:Class="AppDiarioDeClima.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    BackgroundColor="{StaticResource Secondary}">
 
-    <StackLayout>
-        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
-            <Label Text="Welcome to Xamarin.Forms!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
-        </Frame>
-        <Label Text="Start developing now" FontSize="Title" Padding="30,10,30,10"/>
-        <Label Text="Make changes to your XAML file and save to see your UI update in the running app with XAML Hot Reload. Give it a try!" FontSize="16" Padding="30,0,30,0"/>
-        <Label FontSize="16" Padding="30,24,30,0">
-            <Label.FormattedText>
-                <FormattedString>
-                    <FormattedString.Spans>
-                        <Span Text="Learn more at "/>
-                        <Span Text="https://aka.ms/xamarin-quickstart" FontAttributes="Bold"/>
-                    </FormattedString.Spans>
-                </FormattedString>
-            </Label.FormattedText>
-        </Label>
+    <StackLayout Padding="20" VerticalOptions="CenterAndExpand">
+        <!--  Logo  -->
+        <Image
+            Margin="0,0,0,50"
+            HeightRequest="150"
+            HorizontalOptions="Center"
+            Source="logo.png"
+            WidthRequest="150" />
+
+        <!--  Campo de usuário  -->
+        <Entry
+            x:Name="usernameEntry"
+            Margin="0,0,0,20"
+            Keyboard="Default"
+            Placeholder="Login" />
+
+        <!--  Campo de senha  -->
+        <Grid Margin="0,0,0,30">
+            <Entry
+                x:Name="passwordEntry"
+                IsPassword="True"
+                Placeholder="Senha" />
+
+            <!--  Botão para mostrar/ocultar senha  -->
+            <ImageButton
+                Margin="10"
+                BackgroundColor="Transparent"
+                Clicked="OnTogglePasswordVisibilityClicked"
+                HeightRequest="35"
+                HorizontalOptions="End"
+                Source="eye_icon.png"
+                VerticalOptions="Center" />
+        </Grid>
+
+        <!--  Botão de Entrar  -->
+        <Button
+            x:Name="btnEntrar"
+            BackgroundColor="#2196F3"
+            Clicked="btnEntrar_Clicked"
+            Text="Entrar"
+            TextColor="White" />
+
+        <!--  Botão de Cadastrar  -->
+        <Grid>
+            <StackLayout HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
+                <Label
+                    FontAttributes="Italic"
+                    FontSize="14"
+                    Text="Não tem uma conta?"
+                    VerticalOptions="CenterAndExpand" />
+                <Button
+                    x:Name="btnCadastrar"
+                    Margin="-15,0,0,0"
+                    BackgroundColor="Transparent"
+                    Clicked="btnCadastrar_Clicked"
+                    FontSize="16"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="Cadastre-se"
+                    TextColor="#2196F3" />
+            </StackLayout>
+        </Grid>
+
+
     </StackLayout>
 
 </ContentPage>

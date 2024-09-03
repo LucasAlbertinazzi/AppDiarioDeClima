@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="AppDiarioDeClima.Pages.HistClimaPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    BackgroundColor="{StaticResource Secondary}">
+    <ContentPage.Content>
+        <StackLayout
+            Padding="30"
+            Spacing="20"
+            VerticalOptions="CenterAndExpand">
+            <Label
+                FontSize="Large"
+                HorizontalOptions="Center"
+                Text="Últimas 5 pesquisas" />
+
+            <ListView
+                x:Name="ultimosClimas"
+                HasUnevenRows="True"
+                ItemTapped="OnItemTapped"
+                SeparatorVisibility="None">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame
+                                Margin="5"
+                                Padding="10"
+                                BackgroundColor="White"
+                                BorderColor="#cccccc"
+                                CornerRadius="10"
+                                HasShadow="True">
+                                <StackLayout>
+                                    <StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal">
+
+                                        <Label
+                                            FontAttributes="Bold"
+                                            FontSize="Medium"
+                                            HorizontalOptions="StartAndExpand"
+                                            Text="{Binding Cidade}"
+                                            TextColor="#333" />
+
+                                        <Label
+                                            FontSize="Small"
+                                            HorizontalOptions="End"
+                                            Text="{Binding DataBusca, StringFormat='{0:dd/MM/yyyy}'}"
+                                            TextColor="Gray" />
+                                    </StackLayout>
+
+                                    <Label
+                                        FontSize="Small"
+                                        Text="{Binding Temperatura}"
+                                        TextColor="Gray" />
+
+                                    <Label
+                                        FontSize="Small"
+                                        Text="{Binding Clima}"
+                                        TextColor="Gray" />
+                                </StackLayout>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Frame
+                x:Name="chartFrame"
+                Margin="5"
+                Padding="10"
+                BackgroundColor="White"
+                BorderColor="#cccccc"
+                CornerRadius="10"
+                HasShadow="True"
+                IsVisible="False">
+                <StackLayout
+                    x:Name="chartLayout"
+                    IsVisible="False"
+                    Orientation="Vertical"
+                    Spacing="10" />
+            </Frame>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
