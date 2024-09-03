@@ -6,7 +6,7 @@
     BackgroundColor="{StaticResource Secondary}">
     <ContentPage.Content>
         <StackLayout
-            Padding="30"
+            Padding="5"
             Spacing="20"
             VerticalOptions="CenterAndExpand">
             <Label
@@ -23,7 +23,7 @@
                     <DataTemplate>
                         <ViewCell>
                             <Frame
-                                Margin="5"
+                                Margin="10"
                                 Padding="10"
                                 BackgroundColor="White"
                                 BorderColor="#cccccc"
@@ -64,7 +64,7 @@
             <Frame
                 x:Name="chartFrame"
                 Margin="5"
-                Padding="10"
+                Padding="5"
                 BackgroundColor="White"
                 BorderColor="#cccccc"
                 CornerRadius="10"

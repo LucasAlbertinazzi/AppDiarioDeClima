@@ -6,9 +6,9 @@
     BackgroundColor="{StaticResource Secondary}">
     <ContentPage.Content>
         <StackLayout
-            Padding="30"
+            Padding="10"
             Spacing="20"
-            VerticalOptions="CenterAndExpand">
+            VerticalOptions="StartAndExpand">
 
             <!--  Campo para inserir a cidade  -->
             <Entry
@@ -23,6 +23,59 @@
                 Clicked="btnClima_Clicked"
                 Text="Buscar Clima"
                 TextColor="White" />
+
+            <Frame
+                x:Name="frameClima"
+                Padding="10"
+                BackgroundColor="White"
+                BorderColor="#cccccc"
+                CornerRadius="10"
+                HasShadow="True"
+                HeightRequest="80"
+                IsVisible="False">
+                <StackLayout>
+                    <StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal">
+
+                        <Label
+                            FontAttributes="Bold"
+                            FontSize="Medium"
+                            HorizontalOptions="StartAndExpand"
+                            Text="Brotas"
+                            TextColor="#333" />
+
+                        <Label
+                            FontSize="Small"
+                            HorizontalOptions="End"
+                            Text="03/09/2024"
+                            TextColor="Gray" />
+                    </StackLayout>
+
+                    <Label
+                        FontSize="Small"
+                        Text="34°"
+                        TextColor="Gray" />
+
+                    <Label
+                        FontSize="Small"
+                        Text="Céu limpo"
+                        TextColor="Gray" />
+                </StackLayout>
+            </Frame>
+
+            <Frame
+                x:Name="chartFrame"
+                Padding="5"
+                BackgroundColor="White"
+                BorderColor="#cccccc"
+                CornerRadius="10"
+                HasShadow="True"
+                HeightRequest="300"
+                IsVisible="False">
+                <StackLayout
+                    x:Name="chartLayout"
+                    Orientation="Vertical"
+                    Spacing="10" />
+            </Frame>
 
         </StackLayout>
     </ContentPage.Content>
