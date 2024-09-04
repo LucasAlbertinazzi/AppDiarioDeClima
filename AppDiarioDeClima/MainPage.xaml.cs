@@ -1,4 +1,6 @@
-﻿using AppDiarioDeClima.Pages;
+﻿using AppDiarioDeClima.Classes;
+using AppDiarioDeClima.Pages;
+using AppDiarioDeClima.Services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,6 +16,7 @@ namespace AppDiarioDeClima
     {
         #region 1- VARIÁVEIS
         private bool isPasswordVisible = false;
+        UserServices servicesUser = new UserServices();
         #endregion
 
         #region 2- CONSTRUTORES
@@ -24,10 +27,7 @@ namespace AppDiarioDeClima
         #endregion
 
         #region 3- MÉTODOS
-        private bool ValidarLogin(string username, string password)
-        {
-            return username == "lucas" && password == "01234";
-        }
+        
         #endregion
 
         #region 4- EVENTOS DE CONTROLE
@@ -36,18 +36,18 @@ namespace AppDiarioDeClima
             string username = usernameEntry.Text;
             string password = passwordEntry.Text;
 
-            // Validar o login
-            if (ValidarLogin(username, password))
+            InfoUser infos = new InfoUser();
+            infos.Nome = username;
+            infos.Senha = password;
+
+            if (await servicesUser.AutenticarUsuarioAsync(infos))
             {
-                // Salvar o nome do usuário nas preferências
                 Preferences.Set("user", username);
 
-                // Navegar para a tela do MenuPage
                 await Navigation.PushAsync(new MenuPage());
             }
             else
             {
-                // Exibir alerta de erro se a validação falhar
                 await DisplayAlert("Erro", "Usuário ou senha inválidos", "OK");
             }
         }

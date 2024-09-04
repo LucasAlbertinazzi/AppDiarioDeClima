@@ -100,14 +100,7 @@ namespace AppDiarioDeClima.Pages
 
         private List<InfoClima> BuscaHistorico()
         {
-            return new List<InfoClima>
-            {
-                new InfoClima { Cidade = "São Paulo", Temperatura = "25°C", Clima = "Ensolarado", DataBusca = DateTime.Now.AddDays(-1) },
-                new InfoClima { Cidade = "Rio de Janeiro", Temperatura = "30°C", Clima = "Nublado", DataBusca = DateTime.Now.AddDays(-2) },
-                new InfoClima { Cidade = "Belo Horizonte", Temperatura = "22°C", Clima = "Chuvoso", DataBusca = DateTime.Now.AddDays(-3) },
-                new InfoClima { Cidade = "Curitiba", Temperatura = "18°C", Clima = "Frio", DataBusca = DateTime.Now.AddDays(-4) },
-                new InfoClima { Cidade = "Salvador", Temperatura = "28°C", Clima = "Parcialmente Nublado", DataBusca = DateTime.Now.AddDays(-5) }
-            };
+            return new List<InfoClima>();
         }
         #endregion
 
@@ -118,7 +111,7 @@ namespace AppDiarioDeClima.Pages
             {
                 ((ListView)sender).SelectedItem = null;
 
-                ExibeGrafico(selectedData.DataBusca);
+                ExibeGrafico(selectedData.DataHora);
             }
         }
         #endregion
