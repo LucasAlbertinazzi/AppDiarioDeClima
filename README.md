@@ -77,7 +77,6 @@ Para executar a API localmente, siga estas etapas:
 4. Compile e construa o projeto em um dispositivo conectado à mesma rede da sua API. A aplicação funcionará normalmente.
 
 ## Estrutura do Projeto
-- **Services**: Lida com a requisição de dados da API.
 - **Models**: Contém as classes que representam os dados da previsão do tempo.
 - **Views**: Páginas de interface, como lista de cidades e detalhes da previsão.
 - **ViewModels**: Lógica da interface e comunicação entre a View e os Models.
