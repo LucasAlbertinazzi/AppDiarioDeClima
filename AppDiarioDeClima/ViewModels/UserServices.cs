@@ -4,7 +4,7 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AppDiarioDeClima.Services
+namespace AppDiarioDeClima.ViewModels
 {
     public class UserServices
     {

@@ -8,12 +8,12 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("AppDiarioDeClima.Pages.CadastroPage.xaml", "Pages/CadastroPage.xaml", typeof(global::AppDiarioDeClima.Pages.CadastroPage))]
+[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("AppDiarioDeClima.Views.CadastroPage.xaml", "Views/CadastroPage.xaml", typeof(global::AppDiarioDeClima.Views.CadastroPage))]
 
-namespace AppDiarioDeClima.Pages {
+namespace AppDiarioDeClima.Views {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Pages\\CadastroPage.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Views\\CadastroPage.xaml")]
     public partial class CadastroPage : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]

@@ -20,16 +20,16 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="Pages\BuscaClimaPage.xaml">
+    <EmbeddedResource Update="Views\BuscaClimaPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Pages\CadastroPage.xaml">
+    <EmbeddedResource Update="Views\CadastroPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Pages\HistClimaPage.xaml">
+    <EmbeddedResource Update="Views\HistClimaPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Pages\MenuPage.xaml">
+    <EmbeddedResource Update="Views\MenuPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

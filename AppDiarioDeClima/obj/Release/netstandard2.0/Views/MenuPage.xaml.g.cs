@@ -8,12 +8,12 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("AppDiarioDeClima.Pages.MenuPage.xaml", "Pages/MenuPage.xaml", typeof(global::AppDiarioDeClima.Pages.MenuPage))]
+[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("AppDiarioDeClima.Views.MenuPage.xaml", "Views/MenuPage.xaml", typeof(global::AppDiarioDeClima.Views.MenuPage))]
 
-namespace AppDiarioDeClima.Pages {
+namespace AppDiarioDeClima.Views {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Pages\\MenuPage.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Views\\MenuPage.xaml")]
     public partial class MenuPage : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]

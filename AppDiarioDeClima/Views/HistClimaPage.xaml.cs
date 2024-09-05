@@ -1,5 +1,5 @@
 ﻿using AppDiarioDeClima.Classes;
-using AppDiarioDeClima.Services;
+using AppDiarioDeClima.ViewModels;
 using Microcharts;
 using SkiaSharp;
 using System;
@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace AppDiarioDeClima.Pages
+namespace AppDiarioDeClima.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class HistClimaPage : ContentPage

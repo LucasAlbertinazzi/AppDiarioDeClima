@@ -1,11 +1,11 @@
 ﻿using AppDiarioDeClima.Classes;
-using AppDiarioDeClima.Services;
+using AppDiarioDeClima.ViewModels;
 using System;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace AppDiarioDeClima.Pages
+namespace AppDiarioDeClima.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class CadastroPage : ContentPage

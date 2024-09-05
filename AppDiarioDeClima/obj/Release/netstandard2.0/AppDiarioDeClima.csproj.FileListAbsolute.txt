@@ -26,10 +26,10 @@ D:\GITHUB\AppDiarioDeClima\AppDiarioDeClima\obj\Release\netstandard2.0\AppDiario
 D:\GITHUB\AppDiarioDeClima\AppDiarioDeClima\obj\Release\netstandard2.0\AppDiarioDeClima.GeneratedMSBuildEditorConfig.editorconfig
 D:\GITHUB\AppDiarioDeClima\AppDiarioDeClima\obj\Release\netstandard2.0\App.xaml.g.cs
 D:\GITHUB\AppDiarioDeClima\AppDiarioDeClima\obj\Release\netstandard2.0\MainPage.xaml.g.cs
-D:\GITHUB\AppDiarioDeClima\AppDiarioDeClima\obj\Release\netstandard2.0\Pages\BuscaClimaPage.xaml.g.cs
-D:\GITHUB\AppDiarioDeClima\AppDiarioDeClima\obj\Release\netstandard2.0\Pages\CadastroPage.xaml.g.cs
-D:\GITHUB\AppDiarioDeClima\AppDiarioDeClima\obj\Release\netstandard2.0\Pages\HistClimaPage.xaml.g.cs
-D:\GITHUB\AppDiarioDeClima\AppDiarioDeClima\obj\Release\netstandard2.0\Pages\MenuPage.xaml.g.cs
+D:\GITHUB\AppDiarioDeClima\AppDiarioDeClima\obj\Release\netstandard2.0\Views\BuscaClimaPage.xaml.g.cs
+D:\GITHUB\AppDiarioDeClima\AppDiarioDeClima\obj\Release\netstandard2.0\Views\CadastroPage.xaml.g.cs
+D:\GITHUB\AppDiarioDeClima\AppDiarioDeClima\obj\Release\netstandard2.0\Views\HistClimaPage.xaml.g.cs
+D:\GITHUB\AppDiarioDeClima\AppDiarioDeClima\obj\Release\netstandard2.0\Views\MenuPage.xaml.g.cs
 D:\GITHUB\AppDiarioDeClima\AppDiarioDeClima\obj\Release\netstandard2.0\AppDiarioDeClima.AssemblyInfoInputs.cache
 D:\GITHUB\AppDiarioDeClima\AppDiarioDeClima\obj\Release\netstandard2.0\AppDiarioDeClima.AssemblyInfo.cs
 D:\GITHUB\AppDiarioDeClima\AppDiarioDeClima\obj\Release\netstandard2.0\AppDiarioDeClima.csproj.CoreCompileInputs.cache

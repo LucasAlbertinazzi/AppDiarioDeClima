@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
 
-namespace AppDiarioDeClima.Services
+namespace AppDiarioDeClima.ViewModels
 {
     public class ClimaServices
     {

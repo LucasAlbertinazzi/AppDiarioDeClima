@@ -1,6 +1,6 @@
 ﻿using AppDiarioDeClima.Classes;
-using AppDiarioDeClima.Pages;
-using AppDiarioDeClima.Services;
+using AppDiarioDeClima.Views;
+using AppDiarioDeClima.ViewModels;
 using System;
 using Xamarin.Essentials;
 using Xamarin.Forms;
