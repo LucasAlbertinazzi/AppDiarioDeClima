@@ -20,7 +20,7 @@
 
 ## Banco de Dados
 O banco de dados PostgreSQL está hospedado no Amazon RDS e pode ser acessado com as seguintes credenciais:
-Host=projeto-dev.crcsaggk48qa.us-east-1.rds.amazonaws.com Database=postgres Username=postgres Password=postgres
+```Host=projeto-dev.crcsaggk48qa.us-east-1.rds.amazonaws.com Database=postgres Username=postgres Password=postgres```
 
 
 ## Instalação
