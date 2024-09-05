@@ -1,10 +1,6 @@
 ﻿using AppDiarioDeClima.Classes;
 using AppDiarioDeClima.Services;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -46,7 +42,11 @@ namespace AppDiarioDeClima.Pages
             infos.Nome = username;
             infos.Senha = password;
 
-            if(await servicesUser.CadastrarUsuarioAsync(infos))
+            btnCad.IsVisible = false;
+            loading.IsVisible = true;
+            loading.IsRunning = true;
+
+            if (await servicesUser.CadastrarUsuarioAsync(infos))
             {
                 await DisplayAlert("Sucesso", "Cadastro realizado com sucesso!", "OK");
 
@@ -56,15 +56,17 @@ namespace AppDiarioDeClima.Pages
             {
                 await DisplayAlert("Aviso", "Este usuário já está cadastrado.", "OK");
             }
+
+            btnCad.IsVisible = true;
+            loading.IsVisible = false;
+            loading.IsRunning = false;
         }
 
         private void OnTogglePasswordVisibilityClicked(object sender, EventArgs e)
         {
-            // Alterna a visibilidade da senha
             isPasswordVisible = !isPasswordVisible;
             passwordEntry.IsPassword = !isPasswordVisible;
 
-            // Atualiza o ícone do botão (eye_icon.png = mostrar, eye_off_icon.png = ocultar)
             ((ImageButton)sender).Source = isPasswordVisible ? "eye_off_icon.png" : "eye_icon.png";
         }
         #endregion

@@ -42,6 +42,12 @@
                 Text="Cadastrar"
                 TextColor="White" />
 
+            <ActivityIndicator
+                x:Name="loading"
+                HeightRequest="40"
+                IsVisible="False"
+                Color="White" />
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

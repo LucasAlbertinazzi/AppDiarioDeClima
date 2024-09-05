@@ -25,9 +25,9 @@ androidgeneratejnimarshalmethods=false
 os=windows_nt
 androidincludedebugsymbols=false
 androidpackagenamingpolicy=lowercasecrc64
-_nugetassetstimestamp=638610455374638178
+_nugetassetstimestamp=638611200190513218
 typemapkind=mvid
 androidsupportedabis=armeabi-v7a
 arm64-v8a
 androidmanifestplaceholders=
-projectfullpath=d:\projetos\appdiariodeclima\appdiariodeclima.android\appdiariodeclima.android.csproj
+projectfullpath=d:\github\appdiariodeclima\appdiariodeclima.android\appdiariodeclima.android.csproj

@@ -3796,28 +3796,25 @@
   },
   "packageFolders": {
     "C:\\Users\\lucas\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projetos\\AppDiarioDeClima\\AppDiarioDeClima.Android\\AppDiarioDeClima.Android.csproj",
+      "projectUniqueName": "D:\\GITHUB\\AppDiarioDeClima\\AppDiarioDeClima.Android\\AppDiarioDeClima.Android.csproj",
       "projectName": "AppDiarioDeClima.Android",
-      "projectPath": "D:\\Projetos\\AppDiarioDeClima\\AppDiarioDeClima.Android\\AppDiarioDeClima.Android.csproj",
+      "projectPath": "D:\\GITHUB\\AppDiarioDeClima\\AppDiarioDeClima.Android\\AppDiarioDeClima.Android.csproj",
       "packagesPath": "C:\\Users\\lucas\\.nuget\\packages\\",
-      "outputPath": "D:\\Projetos\\AppDiarioDeClima\\AppDiarioDeClima.Android\\obj\\",
+      "outputPath": "D:\\GITHUB\\AppDiarioDeClima\\AppDiarioDeClima.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
         "C:\\Users\\lucas\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "monoandroid13.0"
@@ -3829,8 +3826,8 @@
       "frameworks": {
         "monoandroid13.0": {
           "projectReferences": {
-            "D:\\Projetos\\AppDiarioDeClima\\AppDiarioDeClima\\AppDiarioDeClima.csproj": {
-              "projectPath": "D:\\Projetos\\AppDiarioDeClima\\AppDiarioDeClima\\AppDiarioDeClima.csproj"
+            "D:\\GITHUB\\AppDiarioDeClima\\AppDiarioDeClima\\AppDiarioDeClima.csproj": {
+              "projectPath": "D:\\GITHUB\\AppDiarioDeClima\\AppDiarioDeClima\\AppDiarioDeClima.csproj"
             }
           }
         }

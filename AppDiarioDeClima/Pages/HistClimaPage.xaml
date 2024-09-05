@@ -5,10 +5,12 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     BackgroundColor="{StaticResource Secondary}">
     <ContentPage.Content>
-        <StackLayout
-            Padding="5"
-            Spacing="20"
-            VerticalOptions="CenterAndExpand">
+        <Grid Padding="5" VerticalOptions="FillAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
             <Label
                 FontSize="Large"
                 HorizontalOptions="Center"
@@ -16,9 +18,12 @@
 
             <ListView
                 x:Name="ultimosClimas"
+                Grid.Row="1"
+                Grid.RowSpan="2"
                 HasUnevenRows="True"
                 ItemTapped="OnItemTapped"
-                SeparatorVisibility="None">
+                SeparatorVisibility="None"
+                VerticalOptions="Fill">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -42,18 +47,30 @@
                                         <Label
                                             FontSize="Small"
                                             HorizontalOptions="End"
-                                            Text="{Binding DataBusca, StringFormat='{0:dd/MM/yyyy}'}"
+                                            Text="{Binding DataHora, StringFormat='{0:dd/MM/yyyy}'}"
+                                            TextColor="Gray" />
+                                    </StackLayout>
+                                    <StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal">
+                                        <Label
+                                            FontSize="Small"
+                                            HorizontalOptions="StartAndExpand"
+                                            Text="{Binding Temperatura}"
+                                            TextColor="Gray" />
+                                        <Label
+                                            FontSize="Small"
+                                            HorizontalOptions="End"
+                                            Text="{Binding TemperaturaMinima}"
+                                            TextColor="Gray" />
+                                        <Label
+                                            FontSize="Small"
+                                            HorizontalOptions="End"
+                                            Text="{Binding TemperaturaMaxima}"
                                             TextColor="Gray" />
                                     </StackLayout>
 
                                     <Label
                                         FontSize="Small"
-                                        Text="{Binding Temperatura}"
-                                        TextColor="Gray" />
-
-                                    <Label
-                                        FontSize="Small"
-                                        Text="{Binding Clima}"
+                                        Text="{Binding Descricao}"
                                         TextColor="Gray" />
                                 </StackLayout>
                             </Frame>
@@ -63,20 +80,34 @@
             </ListView>
             <Frame
                 x:Name="chartFrame"
-                Margin="5"
+                Grid.Row="2"
                 Padding="5"
                 BackgroundColor="White"
                 BorderColor="#cccccc"
                 CornerRadius="10"
-                HasShadow="True"
                 IsVisible="False">
-                <StackLayout
-                    x:Name="chartLayout"
-                    IsVisible="False"
-                    Orientation="Vertical"
-                    Spacing="10" />
+                <Grid>
+                    <Label
+                        x:Name="lblTitulo"
+                        Margin="0,10"
+                        FontAttributes="Bold"
+                        FontSize="20"
+                        HorizontalOptions="CenterAndExpand"
+                        HorizontalTextAlignment="Center"
+                        TextColor="Black"
+                        VerticalOptions="StartAndExpand" />
+                    <ScrollView Margin="0,70,0,0" Orientation="Horizontal">
+                        <FlexLayout
+                            x:Name="chartLayout"
+                            AlignItems="Center"
+                            Direction="Row"
+                            JustifyContent="SpaceBetween"
+                            Wrap="NoWrap" />
+                    </ScrollView>
+                </Grid>
+
             </Frame>
 
-        </StackLayout>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

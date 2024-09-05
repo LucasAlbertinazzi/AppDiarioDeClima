@@ -24,6 +24,12 @@
                 Text="Buscar Clima"
                 TextColor="White" />
 
+            <ActivityIndicator
+                x:Name="loading"
+                HeightRequest="40"
+                IsVisible="False"
+                Color="White" />
+
             <Frame
                 x:Name="frameClima"
                 Padding="10"
@@ -37,27 +43,41 @@
                     <StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal">
 
                         <Label
+                            x:Name="lblCidade"
                             FontAttributes="Bold"
                             FontSize="Medium"
                             HorizontalOptions="StartAndExpand"
-                            Text="Brotas"
                             TextColor="#333" />
 
                         <Label
+                            x:Name="lblData"
                             FontSize="Small"
                             HorizontalOptions="End"
-                            Text="03/09/2024"
                             TextColor="Gray" />
                     </StackLayout>
 
-                    <Label
-                        FontSize="Small"
-                        Text="34°"
-                        TextColor="Gray" />
+                    <StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal">
+                        <Label
+                            x:Name="lblTemp"
+                            FontSize="Small"
+                            HorizontalOptions="StartAndExpand"
+                            TextColor="Gray" />
+                        <Label
+                            x:Name="lblTempMin"
+                            FontSize="Small"
+                            HorizontalOptions="End"
+                            TextColor="Gray" />
+                        <Label
+                            x:Name="lblTempMax"
+                            FontSize="Small"
+                            HorizontalOptions="End"
+                            TextColor="Gray" />
+                    </StackLayout>
+
 
                     <Label
+                        x:Name="lblClima"
                         FontSize="Small"
-                        Text="Céu limpo"
                         TextColor="Gray" />
                 </StackLayout>
             </Frame>
@@ -69,13 +89,30 @@
                 BorderColor="#cccccc"
                 CornerRadius="10"
                 HasShadow="True"
-                HeightRequest="300"
+                HeightRequest="350"
                 IsVisible="False">
-                <StackLayout
-                    x:Name="chartLayout"
-                    Orientation="Vertical"
-                    Spacing="10" />
+                <Grid>
+                    <Label
+                        x:Name="lblTitulo"
+                        Margin="0,10"
+                        FontAttributes="Bold"
+                        FontSize="20"
+                        HorizontalOptions="CenterAndExpand"
+                        HorizontalTextAlignment="Center"
+                        TextColor="Black"
+                        VerticalOptions="StartAndExpand" />
+                    <ScrollView Margin="0,70,0,0" Orientation="Horizontal">
+                        <FlexLayout
+                            x:Name="chartLayout"
+                            AlignItems="Center"
+                            Direction="Row"
+                            JustifyContent="SpaceBetween"
+                            Wrap="NoWrap" />
+                    </ScrollView>
+                </Grid>
+
             </Frame>
+
 
         </StackLayout>
     </ContentPage.Content>

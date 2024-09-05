@@ -1,9 +1,9 @@
 ﻿using AppDiarioDeClima.Classes;
+using AppDiarioDeClima.Services;
 using Microcharts;
 using SkiaSharp;
 using System;
 using System.Collections.Generic;
-using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -13,7 +13,7 @@ namespace AppDiarioDeClima.Pages
     public partial class HistClimaPage : ContentPage
     {
         #region 1- VARIÁVEIS
-        string userLogado = Preferences.Get("user", "Usuário não encontrado");
+        ClimaServices apiclima = new ClimaServices();
         #endregion
 
         #region 2- CONSTRUTORES
@@ -27,63 +27,70 @@ namespace AppDiarioDeClima.Pages
 
         #region 3- MÉTODOS
 
-        private void ExibeGrafico(DateTime selectedDate)
+        private void ExibeGrafico(InfoClima clima)
         {
+            Grid.SetRowSpan(ultimosClimas, 1);
             chartLayout.Children.Clear();
             chartFrame.IsVisible = true;
             chartLayout.IsVisible = true;
 
-            var titleLabel = new Label
-            {
-                Text = $"Variações de Temperatura do dia {selectedDate:dd/MM/yyyy}",
-                FontSize = 20,
-                FontAttributes = FontAttributes.Bold,
-                TextColor = Color.Black,
-                HorizontalTextAlignment = TextAlignment.Center,
-                HorizontalOptions = LayoutOptions.CenterAndExpand,
-                VerticalOptions = LayoutOptions.CenterAndExpand,
-                Margin = new Thickness(0, 10, 0, 10)
-            };
+            lblTitulo.Text = $"Variações de Temperatura do dia {clima.DataHora.ToShortDateString()}";
 
-            chartLayout.Children.Add(titleLabel);
-
-            var temperatures = ObterTemperaturasPorHora(selectedDate);
+            var temperatures = ObterTemperaturasPorHora(clima.DataHora, clima);
 
             var chart = new LineChart
             {
                 Entries = temperatures,
                 PointSize = 20,
                 PointAreaAlpha = 50,
-                LabelTextSize = 30,
-                LineSize = 5,
+                LabelTextSize = 35,
+                LineSize = 6,
                 BackgroundColor = SKColor.Parse("#FFFFFF"),
-                Margin = 15,
+                Margin = 20,
+                IsAnimated = true,
                 ValueLabelOrientation = Orientation.Horizontal,
                 LabelOrientation = Orientation.Horizontal,
+                MinValue = 10,
+                MaxValue = 40
             };
 
             var chartView = new Microcharts.Forms.ChartView
             {
                 Chart = chart,
-                HeightRequest = 200
+                HeightRequest = 200,
+                VerticalOptions = LayoutOptions.FillAndExpand,
+                WidthRequest = temperatures.Count * 100
             };
 
             chartLayout.Children.Add(chartView);
         }
 
 
-        private List<ChartEntry> ObterTemperaturasPorHora(DateTime date)
+        private List<ChartEntry> ObterTemperaturasPorHora(DateTime date, InfoClima clima)
         {
             var temperatures = new List<ChartEntry>();
             Random random = new Random();
 
-            for (int hour = 0; hour < 24; hour += 2) 
+            int horaAtual = DateTime.Now.Hour;
+
+            if (date.Date < DateTime.Now.Date)
             {
-                float temperature = random.Next(15, 35);
+                horaAtual = 24;
+            }
+
+            string min = clima.TemperaturaMinima.Replace("°C", "");
+            string max = clima.TemperaturaMaxima.Replace("°C", "");
+
+            int tempMin = (int)Math.Round(Convert.ToDouble(min)) -1;
+            int tempMax = (int)Math.Round(Convert.ToDouble(max)) +1;
+
+            for (int hour = 0; hour <= horaAtual; hour += 1)
+            {
+                float temperature = random.Next(tempMin, tempMax);
                 temperatures.Add(new ChartEntry(temperature)
                 {
                     Label = hour.ToString("00") + "h",
-                    ValueLabel = temperature.ToString("0º"), 
+                    ValueLabel = temperature.ToString("0º"),
                     Color = SKColor.Parse("#FF6F61")
                 });
             }
@@ -91,27 +98,25 @@ namespace AppDiarioDeClima.Pages
             return temperatures;
         }
 
-
-        private void LoadData()
+        private async void LoadData()
         {
-            List<InfoClima> lastSearches = BuscaHistorico();
+            List<InfoClima> lastSearches = await apiclima.ObterUltimosRegistros(Global.CodUser);
+
+            if (lastSearches == null) { await DisplayAlert("Aviso", "Nenhuma informação encontrada!", "OK"); return; };
+
             ultimosClimas.ItemsSource = lastSearches;
         }
 
-        private List<InfoClima> BuscaHistorico()
-        {
-            return new List<InfoClima>();
-        }
         #endregion
 
         #region 4- EVENTOS DE CONTROLE
-        private async void OnItemTapped(object sender, ItemTappedEventArgs e)
+        private void OnItemTapped(object sender, ItemTappedEventArgs e)
         {
-            if (e.Item != null && e.Item is InfoClima selectedData)
+            if (e.Item != null && e.Item is InfoClima selecionado)
             {
                 ((ListView)sender).SelectedItem = null;
 
-                ExibeGrafico(selectedData.DataHora);
+                ExibeGrafico(selecionado);
             }
         }
         #endregion

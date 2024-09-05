@@ -6,7 +6,6 @@
     BackgroundColor="{StaticResource Secondary}">
 
     <StackLayout Padding="20" VerticalOptions="CenterAndExpand">
-        <!--  Logo  -->
         <Image
             Margin="0,0,0,50"
             HeightRequest="150"
@@ -14,21 +13,18 @@
             Source="logo.png"
             WidthRequest="150" />
 
-        <!--  Campo de usuário  -->
         <Entry
             x:Name="usernameEntry"
             Margin="0,0,0,20"
             Keyboard="Default"
             Placeholder="Login" />
 
-        <!--  Campo de senha  -->
         <Grid Margin="0,0,0,30">
             <Entry
                 x:Name="passwordEntry"
                 IsPassword="True"
                 Placeholder="Senha" />
 
-            <!--  Botão para mostrar/ocultar senha  -->
             <ImageButton
                 Margin="10"
                 BackgroundColor="Transparent"
@@ -39,7 +35,6 @@
                 VerticalOptions="Center" />
         </Grid>
 
-        <!--  Botão de Entrar  -->
         <Button
             x:Name="btnEntrar"
             BackgroundColor="#2196F3"
@@ -47,7 +42,12 @@
             Text="Entrar"
             TextColor="White" />
 
-        <!--  Botão de Cadastrar  -->
+        <ActivityIndicator
+            x:Name="loading"
+            HeightRequest="40"
+            IsVisible="False"
+            Color="White" />
+
         <Grid>
             <StackLayout HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
                 <Label

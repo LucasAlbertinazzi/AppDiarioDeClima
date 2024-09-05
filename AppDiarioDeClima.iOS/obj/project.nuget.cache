@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "dAYPut33GgE=",
+  "dgSpecHash": "1jxRbZJJZGU=",
   "success": true,
-  "projectFilePath": "D:\\Projetos\\AppDiarioDeClima\\AppDiarioDeClima.iOS\\AppDiarioDeClima.iOS.csproj",
+  "projectFilePath": "D:\\GITHUB\\AppDiarioDeClima\\AppDiarioDeClima.iOS\\AppDiarioDeClima.iOS.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\lucas\\.nuget\\packages\\microcharts\\0.9.5.9\\microcharts.0.9.5.9.nupkg.sha512",
     "C:\\Users\\lucas\\.nuget\\packages\\microcharts.forms\\0.9.5.9\\microcharts.forms.0.9.5.9.nupkg.sha512",

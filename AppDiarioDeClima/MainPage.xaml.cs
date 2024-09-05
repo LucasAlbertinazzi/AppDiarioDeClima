@@ -2,11 +2,6 @@
 using AppDiarioDeClima.Pages;
 using AppDiarioDeClima.Services;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 
@@ -40,6 +35,10 @@ namespace AppDiarioDeClima
             infos.Nome = username;
             infos.Senha = password;
 
+            btnEntrar.IsVisible = false;
+            loading.IsVisible = true;
+            loading.IsRunning = true;
+
             if (await servicesUser.AutenticarUsuarioAsync(infos))
             {
                 Preferences.Set("user", username);
@@ -50,6 +49,10 @@ namespace AppDiarioDeClima
             {
                 await DisplayAlert("Erro", "Usuário ou senha inválidos", "OK");
             }
+
+            btnEntrar.IsVisible = true;
+            loading.IsVisible = false;
+            loading.IsRunning = false;
         }
 
         private async void btnCadastrar_Clicked(object sender, EventArgs e)
